@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #2563EB;
+  --color-secondary: #3B82F6;
+  --color-cta: #F97316;
+  --color-red: #FF6B6B;
+  --color-yellow: #FFD93D;
+  --color-violet: #C4B5FD;
+  --color-bg: #FFFDF5;
+  --color-text: #1E293B;
+  --color-text-muted: #64748B;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), sans-serif;
+}
+
+.font-heading {
+  font-family: var(--font-heading), sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-body), sans-serif;
+}
+
+.brutal-shadow {
+  box-shadow: 6px 6px 0px #1E293B;
+}
+
+.brutal-shadow-sm {
+  box-shadow: 4px 4px 0px #1E293B;
+}
+
+.brutal-shadow-cta {
+  box-shadow: 6px 6px 0px var(--color-cta);
+}
+
+.brutal-press:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px #1E293B;
+}
+
+.brutal-press {
+  transition: transform 0.1s linear, box-shadow 0.1s linear;
+}
+
+.grain {
+  position: relative;
+}
+
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
